@@ -21,7 +21,7 @@ function fetchItems() {
                             <div class="flip-card-front">
                             </div>
                             <div class="flip-card-back">
-                               <ul id="myUL"> <li >${eventos[i].name}</li></ul>
+                                <h1>${eventos[i].name}</h1>
                                 <p><b>${eventos[i].info}</b></p>
                                 <p><i>${eventos[i].locale}</i></p>
                                 <p>${eventos[i].dates.start.dateTime}</p>
