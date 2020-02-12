@@ -30,8 +30,6 @@ function fetchItems() {
                         </div>
                     </div>`
             }
-
-
         }
     };
     request.send();
