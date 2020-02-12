@@ -1,8 +1,9 @@
-var listElements = document.querySelector("#global-header > .container");
+let listElements = document.querySelector("#global-header > .container");
 
 function fetchItems() {
     let request = new XMLHttpRequest();
-    request.open('GET', 'https://app.ticketmaster.com/discovery/v2/events?apikey=r2kXiuzARdulUosWjlGuq4e1AHGfehaL&locale=*');
+
+    request.open('GET', ' https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=r2kXiuzARdulUosWjlGuq4e1AHGfehaL&locale=*');
     request.responseType = 'json';
     request.onreadystatechange = function () {
         console.log('ReadyState: ' + request.readyState);
@@ -20,7 +21,7 @@ function fetchItems() {
                             <div class="flip-card-front">
                             </div>
                             <div class="flip-card-back">
-                                <h1>${eventos[i].name}</h1>
+                               <ul id="myUL"> <li >${eventos[i].name}</li></ul>
                                 <p><b>${eventos[i].info}</b></p>
                                 <p><i>${eventos[i].locale}</i></p>
                                 <p>${eventos[i].dates.start.dateTime}</p>
@@ -37,4 +38,3 @@ function fetchItems() {
 }
 
 fetchItems();
-
